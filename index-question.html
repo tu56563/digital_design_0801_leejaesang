@@ -1,0 +1,115 @@
+<!-- 아래 코드에서 css의 오류2개, html의 오류2개, javascript의 오류1개를 찾으세요 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .project {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        .project h2 {
+            margin: 0 0 10px 0;
+        }
+        .project p {
+            margin: 0;
+        }
+        .show-more {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .show-more button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .container {
+            background-color: #fff;
+        }
+        .project {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>나의 포트폴리오</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#projects">프로젝트</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="projects">
+            <h2>프로젝트</h2>
+            <div class="project">
+                <h2>프로젝트 1</h2>
+                <p>프로젝트 1 설명입니다. 최신 디자인 트렌드와 반응형 웹을 잘 반영하였습니다.</p>
+            </div>
+            <div class="project">
+                <h2>프로젝트 2</h2>
+                <p>프로젝트 2 설명입니다. 최신 디자인 트렌드와 반응형 웹을 잘 반영하였습니다.</p>
+            </div>
+            <div class="project">
+                <h2>프로젝트 3</h2>
+                <p>프로젝트 3 설명입니다. 최신 디자인 트렌드와 반응형 웹을 잘 반영하였습니다.</p>
+            </div>
+            <div class="show-more">
+                <button onclick="showMore()">더 보기</button>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>연락처</h2>
+            <p>이메일: example@example.com</p>
+            <p>전화번호: 010-1234-5678</p>
+        </section>
+    </div>
+    <script>
+        function showMore() {
+            const container = document.querySelector('.container');
+            const newProject = `
+                <h2>추가 프로젝트</h2>
+                <p>추가된 프로젝트 설명입니다. 최신 디자인 트렌드와 반응형 웹을 잘 반영하였습니다.</p>
+            `;
+            container.innerHTML = newProject;
+        }
+    </script>
+</body>
+</html>
